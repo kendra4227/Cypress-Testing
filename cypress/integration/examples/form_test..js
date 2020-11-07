@@ -13,11 +13,13 @@ describe('Testing form inputs', () => {
     cy.get("[data-cy=password]") 
     .type('dev1234.').should("have.value","dev1234.") 
 
-    cy.contains('Terms') 
-    .click()
+    cy.get("[data-cy=terms]") 
+    .check().should("be.checked")
 
-    cy.contains('Submit') 
+    cy.get("[data-cy=submit]") 
     .click()
     })
+
+   
     
     });
